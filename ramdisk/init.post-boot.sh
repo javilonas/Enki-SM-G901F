@@ -23,6 +23,22 @@ ln -s /system/xbin/busybox /system/bin/busybox
 
 sync
 
+# Asegurar Governor for Default
+chmod 777 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+echo "barry_allen" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor # CPU0
+chmod -h 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+chmod 777 /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
+echo "barry_allen" > /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor # CPU1
+chmod -h 0664 /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
+chmod 777 /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
+echo "barry_allen" > /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor # CPU2
+chmod -h 0664 /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
+chmod 777 /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
+echo "barry_allen" > /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor # CPU3
+chmod -h 0664 /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
+
+sync
+
 # KNOX Off
 /res/ext/eliminar_knox.sh
 
