@@ -16,7 +16,7 @@ export TOOLBASE="/home/lonas/Kernel_Lonas/Stock_Plus/buildtools"
 echo "#################### Preparando Entorno ####################"
 export KERNELDIR="/home/lonas/Kernel_Lonas/Stock_Plus"
 
-export KERNEL_VERSION="Stock_Plus-0.1"
+export KERNEL_VERSION="Stock_Plus-0.2"
 export VERSION_KL="SM-G901F"
 export REVISION="DEV"
 
