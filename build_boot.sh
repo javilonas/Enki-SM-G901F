@@ -9,16 +9,16 @@ echo "#################### Eliminando Restos ####################"
 ./clean.sh > /dev/null 2>&1
 
 # Rutas
-export ROOTFS_PATH="/home/lonas/Kernel_Lonas/Stock_Plus/ramdisk"
+export ROOTFS_PATH="/home/lonas/Kernel_Lonas/Enki-SM-G901F/ramdisk"
 export TOOLCHAIN="/home/lonas/Kernel_Lonas/toolchains/arm-cortex_a15-linux-gnueabihf-linaro_4.8.4-2014.11/bin/arm-eabi-"
-export TOOLBASE="/home/lonas/Kernel_Lonas/Stock_Plus/buildtools"
+export TOOLBASE="/home/lonas/Kernel_Lonas/Enki-SM-G901F/buildtools"
 
 echo "#################### Preparando Entorno ####################"
-export KERNELDIR="/home/lonas/Kernel_Lonas/Stock_Plus"
+export KERNELDIR="/home/lonas/Kernel_Lonas/Enki-SM-G901F"
 
-export KERNEL_VERSION="Stock_Plus-0.2"
+export KERNEL_VERSION="Enki-0.7"
 export VERSION_KL="SM-G901F"
-export REVISION="DEV"
+export REVISION="RC"
 
 export KBUILD_BUILD_VERSION="1"
 

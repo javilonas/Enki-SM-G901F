@@ -5,7 +5,7 @@
 #
 
 TOOLCHAIN="/home/lonas/Kernel_Lonas/toolchains/arm-cortex_a15-linux-gnueabihf-linaro_4.8.4-2014.11/bin/arm-eabi-"
-DIR="/home/lonas/Kernel_Lonas/Stock_Plus"
+DIR="/home/lonas/Kernel_Lonas/Enki-SM-G901F"
 export KERNELDIR=`readlink -f .`
 
 echo "#################### Eliminando Restos ####################"
