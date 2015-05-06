@@ -58,8 +58,40 @@ fi
 # Iniciar Zipalign
 /res/ext/zipalign.sh
 
+# Remontar y Optimizar particiones con EXT4
+/res/ext/optimi_remount.sh
+
 # Iniciar Tweaks
 /res/ext/tweaks.sh
+
+
+# Now wait for the rom to finish booting up
+# (by checking for any android process)
+while ! pgrep android.process.acore ; do
+  sleep 2
+done
+
+# kill radio logcat to sdcard
+pkill -f "logcat -b radio -v time";
+
+sleep 2
+
+sync
+
+# Iniciar Liberar Memoria
+/res/ext/libera_ram.sh &
+renice 19 `pidof libera_ram.sh`
+
+sleep 3
+
+/res/ext/smoothsystem.sh &
+renice 19 `pidof smoothsystem.sh`
+
+sleep 3
+
+/res/ext/killing.sh &
+
+sleep 2
 
 sync
 
