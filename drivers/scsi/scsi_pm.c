@@ -18,13 +18,12 @@
 
 static int scsi_dev_type_suspend(struct device *dev, int (*cb)(struct device *))
 {
-	int err = 0;
+	int err;
 
-	// ignore scsi_device_quiesce and cb result
-	scsi_device_quiesce(to_scsi_device(dev));
+	err = scsi_device_quiesce(to_scsi_device(dev));
 	if (err == 0) {
 		if (cb) {
-			cb(dev);
+			err = cb(dev);
 			if (err)
 				scsi_device_resume(to_scsi_device(dev));
 		}
