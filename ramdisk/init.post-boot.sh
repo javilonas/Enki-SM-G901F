@@ -61,25 +61,6 @@ fi
 # Iniciar Tweaks
 /res/ext/tweaks.sh
 
-sync
-
-# Iniciar Liberar Memoria
-/res/ext/libera_ram.sh &
-renice 19 `pidof libera_ram.sh`
-
-sleep 3
-
-/res/ext/smoothsystem.sh &
-renice 19 `pidof smoothsystem.sh`
-
-sleep 3
-
-/res/ext/killing.sh &
-
-sleep 2
-
-sync
-
 stop thermal-engine
 /system/xbin/busybox run-parts /system/etc/init.d
 start thermal-engine
