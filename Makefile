@@ -385,11 +385,6 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -Wno-format-security \
 		   -fno-delete-null-pointer-checks \
 		   -marm -mcpu=cortex-a15 -mtune=cortex-a15 -fno-pic
-		   -mfpu=neon-vfpv4 -fgraphite -floop-parallelize-all \
-		   -ftree-loop-linear -floop-interchange -floop-strip-mine -floop-block \
-  		   -munaligned-access -fno-builtin-memcpy \
-		   -s -pipe -Ofast -DNDEBUG -fno-tree-vectorize -fmodulo-sched \
-		   -fmodulo-sched-allow-regmoves -fno-inline-functions
 
 # L1/L2 cache size parameters
 KBUILD_CFLAGS	+= --param l1-cache-size=32 --param l1-cache-line-size=32 --param l2-cache-size=1024
