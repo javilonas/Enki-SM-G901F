@@ -5,4 +5,4 @@ service post-boot /system/bin/sh /init.post-boot.sh
      oneshot
 
 on property:sys.boot_completed=1
-     start post-boot
+    start post-boot
