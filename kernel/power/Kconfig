@@ -32,9 +32,6 @@ config HAS_WAKELOCK
 	bool
 	default y
 
-config HAS_EARLYSUSPEND
-	bool
-
 config WAKELOCK
 	bool
 	default y
@@ -54,15 +51,6 @@ config POWERSUSPEND_DEBUG
 
 config HIBERNATE_CALLBACKS
 	bool
-
-config EARLYSUSPEND
-	bool "Early suspend"
-	depends on WAKELOCK
-	default y
-	select HAS_EARLYSUSPEND
-	---help---
-	  Call early suspend handlers when the user requested sleep state
-	  changes.
 
 config HIBERNATION
 	bool "Hibernation (aka 'suspend to disk')"
