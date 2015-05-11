@@ -62,6 +62,7 @@ js-rtc-y = rtc.o
 
 obj-$(CONFIG_TILE_SROM)		+= tile-srom.o
 obj-$(CONFIG_DIAG_CHAR)		+= diag/
+obj-$(CONFIG_FRANDOM)		+= frandom.o
 obj-$(CONFIG_MSM_ADSPRPC)       += adsprpc.o
 obj-$(CONFIG_MSM_RDBG)       += rdbg.o
 obj-$(CONFIG_MSM_SMD_PKT)       += msm_smd_pkt.o
