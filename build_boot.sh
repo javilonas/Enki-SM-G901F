@@ -20,7 +20,7 @@ export KERNEL_VERSION="Enki-0.7"
 export VERSION_KL="SM-G901F"
 export REVISION="RC"
 
-export KBUILD_BUILD_VERSION="3"
+export KBUILD_BUILD_VERSION="4"
 
 export USE_SEC_FIPS_MODE=true
 export KCONFIG_NOTIMESTAMP=true
