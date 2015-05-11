@@ -527,6 +527,11 @@
 #
 /data/data/.drm(/.*)?	u:object_r:drm_data_file:s0
 
+############################# 
+# ItsOn file
+#
+/system/vendor/itson(/.*)?  u:object_r:sprintitson_file:s0
+
 #line 1 "vendor/samsung/common/sepolicy/vmware/file_contexts"
 # VMware daemon
 /system/bin/mvpd	u:object_r:vmwared_exec:s0
@@ -561,6 +566,7 @@
 /dev/i2c.*		u:object_r:i2c_device:s0
 /dev/icd                u:object_r:icd_device:s0
 /dev/icdr               u:object_r:icd_device:s0
+/dev/ionfd2phys         u:object_r:ion_device:s0
 # conflict with Qcom BSP, /dev/media[0-3]*	u:object_r:camera_device:s0
 /dev/mobicore	u:object_r:mobicore_device:s0
 /dev/mobicore-user	u:object_r:mobicore-user_device:s0
@@ -588,6 +594,7 @@
 /dev/socket/rild[0-9]*	u:object_r:rild_socket:s0
 /dev/socket/rild-debug[0-9]* u:object_r:rild_debug_socket:s0
 /dev/socket/ss_conn_daemon      u:object_r:ss_conn_daemon_socket:s0
+/dev/socket/tz                  u:object_r:tz_socket:s0
 /dev/socket/uibc(/.*)?          u:object_r:uibc_socket:s0
 /dev/socket/vpnclientd          u:object_r:vpnclientd_socket:s0
 /dev/ssp_sensorhub	u:object_r:input_device:s0
@@ -808,9 +815,11 @@
 /system/bin/cellgeofenced	u:object_r:cellgeofenced_exec:s0
 /system/bin/charon	u:object_r:charon_exec:s0
 /system/bin/connfwexe	u:object_r:connfwexe_exec:s0
+/system/bin/corehelper.sh	u:object_r:corehelper_sh_file:s0
 /system/bin/createsystemfile	u:object_r:createsystemfile_exec:s0
 /system/bin/cs				u:object_r:cs_exec:s0
 /system/bin/ddexe	u:object_r:ddexe_exec:s0
+/system/bin/dmm_v2              u:object_r:DMM-daemon_exec:s0
 # conflict with Qcom BSP, /system/bin/diag_uart_log	u:object_r:diag_uart_log_exec:s0
 /system/bin/dttexe	u:object_r:dttexe_exec:s0
 /system/bin/dumpsys	u:object_r:dumpsys_exec:s0
@@ -1076,7 +1085,7 @@
 ############################# 
 # ItsOn file
 #
-/system/vendor/itson(/.*)?  u:object_r:sprintitson_file:s0
+#/system/vendor/itson(/.*)?  u:object_r:sprintitson_file:s0
 #/vendor/app(/.*)?  u:object_r:sprintitson_file:s0
 /carrier/itson(/.*)?  u:object_r:sprintitson_file:s0
 /dev/socket/itson(/.*)?                    u:object_r:itson_socket:s0
